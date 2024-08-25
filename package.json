@@ -5,6 +5,7 @@
   "dependencies": {
     "@aptos-labs/ts-sdk": "^1.27.1",
     "@aptos-labs/wallet-adapter-ant-design": "^3.0.11",
+    "@panoraexchange/swap-sdk": "^1.0.4",
     "@panoraexchange/widget-sdk": "^1.0.11",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",

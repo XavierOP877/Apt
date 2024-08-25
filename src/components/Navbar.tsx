@@ -18,9 +18,6 @@ const Navbar: React.FC = () => {
         <li>
           <Link to="/widget" className="text-blue-500 hover:text-blue-700">Widget</Link>
         </li>
-        <li>
-          <Link to="/signin" className="text-blue-500 hover:text-blue-700">Sign In/Out</Link>
-        </li>
       </ul>
     </nav>
   );

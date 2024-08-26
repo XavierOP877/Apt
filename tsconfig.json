@@ -8,6 +8,10 @@
     ],
     "allowJs": true,
     "skipLibCheck": true,
+    "paths": {
+      "@aptos-labs/*": ["node_modules/@aptos-labs/*"]
+    },
+    "typeRoots": ["./node_modules/@types", "./src/types"],
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,

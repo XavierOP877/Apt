@@ -2,6 +2,12 @@ import React from 'react';
 import { useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 
+// Import images
+import binocularsImg from '../assets/binoculars.png';
+import bookImg from '../assets/info.png';
+import megaphoneImg from '../assets/social-media-marketing.png';
+import rightSideImage from '../assets/bitcoin-2714196_processed.jpg'; // Import your image
+
 const Home: React.FC = () => {
   const controls = useAnimation();
 
@@ -14,23 +20,74 @@ const Home: React.FC = () => {
   }, [controls]);
 
   return (
-    <div className="pt-20">
-      <header className="bg-blue-500 text-white py-20">
-        <div className="container mx-auto text-center">
-          <h1 className="text-4xl font-bold">Welcome to AptFund</h1>
-          <p className="mt-4">The best crowdfunding platform on Aptos blockchain.</p>
+    <div>
+      <header className="bg-black text-white h-screen flex items-center">
+        <div className="container mx-auto flex h-full">
+          {/* Left Column */}
+          <div className="w-1/2 flex items-center justify-start pl-16">
+            <div className="text-left">
+              <h1 className="text-4xl font-bold mb-4">
+                Crowdfunding, Simplified <br />and Secured
+              </h1>
+              <p className="text-lg leading-relaxed">
+                Welcome to AptFund, the future of crowdfunding—where raising funds is secure, transparent, and completely hassle-free.
+                Harness the power<br />of blockchain to turn your ideas into reality with a platform designed for trust, efficiency, and seamless project support.<br />
+                Your vision, our mission,<br />
+                a brighter future together.
+              </p>
+            </div>
+          </div>
+          {/* Right Column */}
+          <div className="w-1/2 flex items-center justify-center">
+            <img src={rightSideImage} alt="Description" className="w-full h-auto max-w-md" />
+          </div>
         </div>
       </header>
+
+      <section className="bg-indigo-900 text-white py-16">
+        <div className="container mx-auto">
+          <div className="flex justify-between space-x-8">
+            {/* Explore Column */}
+            <div className="w-1/3 text-center flex flex-col items-center">
+              <div className="mb-4">
+                <img src={binocularsImg} alt="Explore" className="w-16 h-16 mx-auto" />
+              </div>
+              <h3 className="text-xl font-bold mb-2">Explore</h3>
+              <p>Discover crowdfunding campaigns</p>
+            </div>
+
+            {/* How It Works Column */}
+            <div className="w-1/3 text-center flex flex-col items-center">
+              <div className="mb-4">
+                <img src={bookImg} alt="How It Works" className="w-16 h-16 mx-auto" />
+              </div>
+              <h3 className="text-xl font-bold mb-2">How It Works</h3>
+              <p>Get introduced to crowdfunding and learn how to use AptFund</p>
+            </div>
+
+            {/* Start Your Campaign Column */}
+            <div className="w-1/3 text-center flex flex-col items-center">
+              <div className="mb-4">
+                <img src={megaphoneImg} alt="Start Your Campaign" className="w-16 h-16 mx-auto" />
+              </div>
+              <h3 className="text-xl font-bold mb-2">Start Your Campaign</h3>
+              <p>Walkthrough the steps before you start creating your campaign</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <motion.section
-        className="container mx-auto py-20"
+        className="bg-black text-white h-screen flex items-center justify-center"
         initial={{ opacity: 0, y: 50 }}
         animate={controls}
       >
-        <h2 className="text-3xl font-bold text-center">How AptFund Works</h2>
-        <p className="mt-4 text-center">AptFund allows you to start and support campaigns easily.</p>
-        {/* Add more interactive content here, such as cards, animations, etc. */}
+        <div className="text-center">
+          <h2 className="text-3xl font-bold">Our Vision</h2>
+          <p className="mt-4">We aim to revolutionize crowdfunding with transparency and trust.</p>
+        </div>
       </motion.section>
-      {/* Additional sections with animations */}
+      {/* Add more sections as needed */}
     </div>
   );
 };

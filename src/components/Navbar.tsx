@@ -22,11 +22,12 @@ const Navbar: React.FC = () => {
 
           if (coinStoreResource) {
             // Adjust this based on actual data structure
-            const { data } = coinStoreResource;
+            const { data }: any = coinStoreResource;
             console.log(data);
-            // const balanceValue = data.coin.value; // Adjust based on actual structure
-            // setBalance(Number(balanceValue) / 1e8); // Convert based on smallest unit, e.g., 1e8 for Aptos
+            const balanceValue = data.coin.value; // Adjust based on actual structure
+            setBalance(Number(balanceValue) / 1e8); // Convert based on smallest unit, e.g., 1e8 for Aptos
             console.log('Coin Store Resource Data:', data.coin.value)
+            console.log(Number(balanceValue) / 1e8);
           }
         } catch (error) {
           console.error('Error fetching balance:', error);
@@ -43,16 +44,19 @@ const Navbar: React.FC = () => {
       <div className="text-2xl font-bold">AptFund</div>
       <ul className="flex space-x-4">
         <li>
-          <Link to="/" className="text-blue-500 hover:text-blue-700">Home</Link>
+          <p className="inline-block px-6 py-3 text-white bg-blue-500 hover:bg-blue-700 rounded-lg font-semibold transition duration-300 ease-in-out">Balance: {balance !== undefined ? balance : "0" } APT</p>
         </li>
         <li>
-          <Link to="/profile" className="text-blue-500 hover:text-blue-700">Profile</Link>
+          <Link to="/" className="inline-block px-6 py-3 text-white bg-blue-500 hover:bg-blue-700 rounded-lg font-semibold transition duration-300 ease-in-out">Home</Link>
         </li>
         <li>
-          <Link to="/campaign" className="text-blue-500 hover:text-blue-700">Campaign</Link>
+          <Link to="/profile" className="inline-block px-6 py-3 text-white bg-blue-500 hover:bg-blue-700 rounded-lg font-semibold transition duration-300 ease-in-out">Profile</Link>
         </li>
         <li>
-          <Link to="/swap" className="text-blue-500 hover:text-blue-700">Widget</Link>
+          <Link to="/campaign" className="inline-block px-6 py-3 text-white bg-blue-500 hover:bg-blue-700 rounded-lg font-semibold transition duration-300 ease-in-out">Campaign</Link>
+        </li>
+        <li>
+          <Link to="/swap" className="inline-block px-6 py-3 text-white bg-blue-500 hover:bg-blue-700 rounded-lg font-semibold transition duration-300 ease-in-out">Widget</Link>
         </li>
       </ul>
     </nav>

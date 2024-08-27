@@ -1,0 +1,14 @@
+[package]
+name = "crowdfund"
+version = "1.0.0"
+authors = []
+
+[addresses]
+apt="0x9e372b0466276fcb1d73484b83aab86d9f9c871d8e804d9658cea840be8b4d3e"
+
+[dev-addresses]
+
+[dependencies.AptosFramework]
+git = "https://github.com/aptos-labs/aptos-core.git"
+rev = "testnet"
+subdir = "aptos-move/framework/aptos-framework"

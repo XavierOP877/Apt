@@ -6,7 +6,7 @@ import { AptosClient, Types } from 'aptos';
 const Navbar: React.FC = () => {
   const { account, connect, disconnect, connected } = useWallet();
   const [balance, setBalance] = useState<number | null>(null);
-  const client = new AptosClient('https://fullnode.testnet.aptoslabs.com/v1');
+  const client = new AptosClient('https://fullnode.devnet.aptoslabs.com/v1');
   console.log(account?.address);
 
   useEffect(() => {
@@ -41,7 +41,7 @@ const Navbar: React.FC = () => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 bg-white shadow-md py-4 px-8 flex justify-between items-center">
-      <div className="text-2xl font-bold">AptFund</div>
+      <div className="text-lg font-bold"> AptFund</div>
       <ul className="flex space-x-4">
         <li>
           <p className="inline-block px-6 py-3 text-white bg-blue-500 hover:bg-blue-700 rounded-lg font-semibold transition duration-300 ease-in-out">Balance: {balance !== undefined ? balance : "0" } APT</p>
@@ -56,7 +56,7 @@ const Navbar: React.FC = () => {
           <Link to="/campaign" className="inline-block px-6 py-3 text-white bg-blue-500 hover:bg-blue-700 rounded-lg font-semibold transition duration-300 ease-in-out">Campaign</Link>
         </li>
         <li>
-          <Link to="/swap" className="inline-block px-6 py-3 text-white bg-blue-500 hover:bg-blue-700 rounded-lg font-semibold transition duration-300 ease-in-out">Widget</Link>
+          <Link to="/create" className="inline-block px-6 py-3 text-white bg-blue-500 hover:bg-blue-700 rounded-lg font-semibold transition duration-300 ease-in-out">Create Campaign</Link>
         </li>
       </ul>
     </nav>

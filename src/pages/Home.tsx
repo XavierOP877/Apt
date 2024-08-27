@@ -26,10 +26,11 @@ const Home: React.FC = () => {
           {/* Left Column */}
           <div className="w-1/2 flex items-center justify-start pl-16">
             <div className="text-left">
-              <h1 className="text-4xl font-bold mb-4">
+            <span className='animate-fadeInUp text-4xl font-bold opacity-0'>AptFund</span>
+              <h1 className="animate-fadeInUp text-4xl font-bold mb-4 opacity-0">
                 Crowdfunding, Simplified <br />and Secured
               </h1>
-              <p className="text-lg leading-relaxed">
+              <p className="animate-fadeInUp text-lg leading-relaxed opacity-0">
                 Welcome to AptFund, the future of crowdfunding—where raising funds is secure, transparent, and completely hassle-free.
                 Harness the power<br />of blockchain to turn your ideas into reality with a platform designed for trust, efficiency, and seamless project support.<br />
                 Your vision, our mission,<br />

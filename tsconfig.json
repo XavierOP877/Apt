@@ -11,7 +11,7 @@
     "paths": {
       "@aptos-labs/*": ["node_modules/@aptos-labs/*"]
     },
-    "typeRoots": ["./node_modules/@types", "./src/types"],
+    "typeRoots": ["./node_modules/@types", "src/utils"],
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,
